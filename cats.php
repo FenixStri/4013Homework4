@@ -52,8 +52,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <tbody>
           
 <?php
-$sql = "SELECT instructor_id, instructor_name from instructor";
+$sql = "SELECT cat_id, cat_breed, cat_lifeexpectancy from Cats";
 $result = $conn->query($sql);
+
 
 if ($result->num_rows > 0) {
   // output data of each row
