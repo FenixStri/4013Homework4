@@ -17,7 +17,6 @@ $username = "fenixouc_suser";
 $password = "tAp!bGKJh9u7";
 $dbname = "fenixouc_database1";
 
-// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -25,12 +24,12 @@ if ($conn->connect_error) {
 }
 $iid = $_GET['id'];
 //echo $iid;
-$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=?" . $iid;
+$sql = "select section_id, section_number, i.instructor_name, c.prefix, c.number from section s join instructor i on i.instructor_id = s.instructor_id join course c on c.course_id = s.course_id where i.instructor_id=?";
 //echo $sql;
-      $stmt = $conn->perpare($sql);
-      $stmt->bind_param("i", $iid);
-      $stmt->execute();
-      $result = $conn->query($sql);
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $iid);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
   // output data of each row
