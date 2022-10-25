@@ -66,7 +66,7 @@ if ($result->num_rows > 0) {
           
           <tr>
             <td><?=$row["instructor_id"]?></td>
-            
+            <td><a href="instructor-section.php?id=<?=$row["instructor_id"]?>"><?=$row["instructor_name"]?></a></td>
             <td>
               <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#editInstructor<?=$row["instructor_id"]?>">
                 Edit
