@@ -11,10 +11,10 @@
       
 <?php
 $servername = "localhost";
-$username = "projecto_homework3";
-$password = "Qa._@ZR@QtoU";
-$dbname = "projecto_homework3";
-
+$username = "fenixouc_suser";
+$password = "tAp!bGKJh9u7";
+$dbname = "fenixouc_database1";
+      
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
