@@ -1,5 +1,4 @@
 <?php require_once('header.php');?>
-
     <h1>Sections</h1>
 <table class="table table-striped">
   <thead>
