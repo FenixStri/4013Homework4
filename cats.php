@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <tr>
             <th>ID</th>
             <th>Cat Breed</th>
-            <th>Life Expectancy(years)</th>
+            <th></th>
             <th></th>
           </tr>
         </thead>
