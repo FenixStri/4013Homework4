@@ -17,7 +17,7 @@ $sNumber = $_POST['sNumber'];
 $sql = "update section set section_number=? where section_id=?";
 //echo $sql;
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("si", $sNumber, $_POST['iid']);
+    $stmt->bind_param("i", $sNumber, $_POST['iid']);
     $stmt->execute();
 ?>
     
